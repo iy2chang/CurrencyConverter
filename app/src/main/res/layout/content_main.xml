@@ -44,6 +44,21 @@
             android:text="UsToYen"
             android:id="@+id/UsToYenRadioB"
             android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UsToTaiwan"
+            android:id="@+id/UsToTaiwanRadioB"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TaiwanToUs"
+            android:checked="false"
+            android:id="@+id/TaiwanToUsRadioB" />
+
     </RadioGroup>
 
     <Button

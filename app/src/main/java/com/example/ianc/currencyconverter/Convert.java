@@ -18,4 +18,16 @@ public class Convert {
         double rate = 123.11;
         return amount * rate;
     }
+
+    // Taiwan to Us
+    public static double TaiwanToUs(double amount){
+        double rate = 0.031;
+        return amount * rate;
+    }
+
+    // Us to Taiwan
+    public static double UsToTaiwan(double amount){
+        double rate = 32.74;
+        return amount * rate;
+    }
 }

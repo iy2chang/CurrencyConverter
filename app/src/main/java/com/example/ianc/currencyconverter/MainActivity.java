@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     EditText amountText;
     RadioButton YenToUs;
     RadioButton UsToYen;
+    RadioButton UsToTaiwan;
+    RadioButton TaiwanToUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         amountText = (EditText) findViewById(R.id.AmountEditText);
         YenToUs = (RadioButton) findViewById(R.id.YenToUSRadioB);
         UsToYen = (RadioButton) findViewById(R.id.UsToYenRadioB);
+        UsToTaiwan = (RadioButton) findViewById(R.id.UsToTaiwanRadioB);
+        TaiwanToUs = (RadioButton) findViewById(R.id.TaiwanToUsRadioB);
+
     }
 
     @Override
@@ -64,8 +69,14 @@ public class MainActivity extends AppCompatActivity {
         if(YenToUs.isChecked()){
             amount = Convert.JapanToUs(amount);
         }
-        else{
+        if (UsToYen.isChecked()){
             amount = Convert.UsToJapan(amount);
+        }
+        if(TaiwanToUs.isChecked()){
+            amount = Convert.TaiwanToUs(amount);
+        }
+        else{
+            amount = Convert.UsToTaiwan(amount);
         }
         amountText.setText(Double.toString(amount));
     }
