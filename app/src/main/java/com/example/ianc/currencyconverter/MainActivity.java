@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
     EditText amountText;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton UsToYen;
     RadioButton UsToTaiwan;
     RadioButton TaiwanToUs;
+    RadioButton UsToKorea;
+    RadioButton KoreaToUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         UsToYen = (RadioButton) findViewById(R.id.UsToYenRadioB);
         UsToTaiwan = (RadioButton) findViewById(R.id.UsToTaiwanRadioB);
         TaiwanToUs = (RadioButton) findViewById(R.id.TaiwanToUsRadioB);
+        UsToKorea = (RadioButton) findViewById(R.id.UsToKoreaRadioB);
+        KoreaToUs = (RadioButton) findViewById(R.id.KoreaToUsRadioB);
 
     }
 
@@ -66,17 +71,28 @@ public class MainActivity extends AppCompatActivity {
     // when user click the convert button
     public void ConvertButton(View v){
         double amount = Double.valueOf(amountText.getText().toString());
-        if(YenToUs.isChecked()){
+        if(YenToUs.isChecked()) {
             amount = Convert.JapanToUs(amount);
         }
         if (UsToYen.isChecked()){
             amount = Convert.UsToJapan(amount);
+
         }
         if(TaiwanToUs.isChecked()){
             amount = Convert.TaiwanToUs(amount);
+
+        }
+        if(UsToTaiwan.isChecked()){
+            amount = Convert.UsToTaiwan(amount);
+
+        }
+        if(UsToKorea.isChecked()){
+            amount = Convert.UsToKorea(amount);
+
         }
         else{
-            amount = Convert.UsToTaiwan(amount);
+            amount = Convert.KoreaToUs(amount);
+
         }
         amountText.setText(Double.toString(amount));
     }

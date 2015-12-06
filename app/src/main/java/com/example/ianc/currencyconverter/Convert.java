@@ -30,4 +30,16 @@ public class Convert {
         double rate = 32.74;
         return amount * rate;
     }
+
+    // Us to Korea
+    public static double UsToKorea(double amount){
+        double rate = 1161.39;
+        return amount * rate;
+    }
+
+    // Korea to Us
+    public static double KoreaToUs(double amount){
+        double rate = 0.00086;
+        return amount * rate;
+    }
 }

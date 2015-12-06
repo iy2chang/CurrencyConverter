@@ -24,36 +24,38 @@
         android:hint="Amount to Convert" />
 
     <RadioGroup
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/AmountEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/radioGroup">
+        android:id="@+id/radioGroup"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="YenToUs"
-            android:id="@+id/YenToUSRadioB"
-            android:checked="false" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="UsToYen"
             android:id="@+id/UsToYenRadioB"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="UsToTaiwan"
             android:id="@+id/UsToTaiwanRadioB"
             android:checked="false" />
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YenToUs"
+            android:id="@+id/YenToUSRadioB"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TaiwanToUs"
             android:checked="false"
@@ -66,8 +68,28 @@
         android:layout_height="wrap_content"
         android:text="Convert"
         android:id="@+id/ConvertButton"
+        android:onClick="ConvertButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp" />
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KoreaToUs"
+        android:id="@+id/KoreaToUsRadioB"
         android:layout_below="@+id/radioGroup"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="ConvertButton" />
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UsToKorea"
+        android:id="@+id/UsToKoreaRadioB"
+        android:checked="false"
+        android:layout_below="@+id/KoreaToUsRadioB"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
