@@ -36,34 +36,34 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="UsToYen"
+            android:text="USA To JP"
             android:id="@+id/UsToYenRadioB"
             android:checked="false" />
 
         <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="UsToTaiwan"
+            android:text="USA To TW"
             android:id="@+id/UsToTaiwanRadioB"
             android:checked="false" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="YenToUs"
+            android:text="JP To USA"
             android:id="@+id/YenToUSRadioB"
             android:checked="false" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TaiwanToUs"
+            android:text="TW To USA"
             android:checked="false"
             android:id="@+id/TaiwanToUsRadioB" />
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="KoreaToUs"
+            android:text="KR To USA"
             android:id="@+id/KoreaToUsRadioB"
             android:layout_below="@+id/radioGroup"
             android:layout_alignParentLeft="true"
@@ -73,7 +73,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="UsToKorea"
+            android:text="USA To KR"
             android:id="@+id/UsToKoreaRadioB"
             android:checked="false"
             android:layout_below="@+id/KoreaToUsRadioB"
@@ -88,9 +88,9 @@
         android:text="Convert"
         android:id="@+id/ConvertButton"
         android:onClick="ConvertButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="82dp" />
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

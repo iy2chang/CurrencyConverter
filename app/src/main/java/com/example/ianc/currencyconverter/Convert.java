@@ -6,40 +6,42 @@ package com.example.ianc.currencyconverter;
  * The currency rate is based on 12/5/2015
  */
 public class Convert {
+    // variable for currency rate
+    private double JP_US = 0.0081;
+    private double US_JP = 123.11;
+    private double TW_US = 0.031;
+    private double US_TW = 32.71;
+    private double US_KR = 1161.39;
+    private double KR_US = 0.00086;
 
     // Japan to US
-    public static double JapanToUs(double amount){
-        double rate = 0.0081;
-        return amount * rate;
+    public double JapanToUs(double amount){
+
+        return amount * JP_US;
     }
 
     // Us to Japan
-    public static double UsToJapan(double amount){
-        double rate = 123.11;
-        return amount * rate;
+    public double UsToJapan(double amount){
+        return amount * US_JP;
     }
 
     // Taiwan to Us
-    public static double TaiwanToUs(double amount){
-        double rate = 0.031;
-        return amount * rate;
+    public double TaiwanToUs(double amount){
+        return amount * TW_US;
     }
 
     // Us to Taiwan
-    public static double UsToTaiwan(double amount){
-        double rate = 32.74;
-        return amount * rate;
+    public double UsToTaiwan(double amount){
+        return amount * US_TW;
     }
 
     // Us to Korea
-    public static double UsToKorea(double amount){
-        double rate = 1161.39;
-        return amount * rate;
+    public double UsToKorea(double amount){
+        return amount * US_KR;
     }
 
     // Korea to Us
-    public static double KoreaToUs(double amount){
-        double rate = 0.00086;
-        return amount * rate;
+    public double KoreaToUs(double amount){
+        return amount * KR_US;
     }
 }

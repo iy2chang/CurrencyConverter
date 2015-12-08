@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton TaiwanToUs;
     RadioButton UsToKorea;
     RadioButton KoreaToUs;
-
+    Convert cv = new Convert();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,26 +72,26 @@ public class MainActivity extends AppCompatActivity {
     public void ConvertButton(View v){
         double amount = Double.valueOf(amountText.getText().toString());
         if(YenToUs.isChecked()) {
-            amount = Convert.JapanToUs(amount);
+            amount = cv.JapanToUs(amount);
         }
         if (UsToYen.isChecked()){
-            amount = Convert.UsToJapan(amount);
+            amount = cv.UsToJapan(amount);
 
         }
         if(TaiwanToUs.isChecked()){
-            amount = Convert.TaiwanToUs(amount);
+            amount = cv.TaiwanToUs(amount);
 
         }
         if(UsToTaiwan.isChecked()){
-            amount = Convert.UsToTaiwan(amount);
+            amount = cv.UsToTaiwan(amount);
 
         }
         if(UsToKorea.isChecked()){
-            amount = Convert.UsToKorea(amount);
+            amount = cv.UsToKorea(amount);
 
         }
         else{
-            amount = Convert.KoreaToUs(amount);
+            amount = cv.KoreaToUs(amount);
 
         }
         amountText.setText(Double.toString(amount));
